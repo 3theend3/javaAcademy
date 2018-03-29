@@ -14,7 +14,7 @@ class Bottles
             {
                 out.print(beers + containers(beers) + " of beer on the wall,");
                 out.println(beers + containers(beers) + " of beer,");
-                out.print("Go to the store, buy some more,");
+                out.print(actionAfterTake(beers));
                 out.println("99" + containers(beers) + " of beer on the wall.\r\n");
                 
             }
@@ -22,22 +22,26 @@ class Bottles
 
                 out.print(beers + containers(beers) + " of beer on the wall,");
                 out.println(beers + containers(beers) + " of beer,");
-                out.print("Take one down, pass it around,");
+                out.print(actionAfterTake(beers));
                 out.println(beerLeft(beers) + containers(beerLeft(beers)) + " of beer on the wall.\r\n");
             }else if (beerLeft(beers) == 1){
 
                 out.print(beers + containers(beers) + " of beer on the wall,");
                 out.println(beers + containers(beers) + " of beer,");
-                out.print("Take one down, pass it around,");
+                out.print(actionAfterTake(beers));
                 out.println(beerLeft(beers) + containers(beerLeft(beers)) + " of beer on the wall.\r\n");
             }
             else{
                 out.print(beers + containers(beers) + " of beer on the wall,");
                 out.println(beers + containers(beers) + " of beer,");
-                out.print("Take one down, pass it around,");
+                out.print(actionAfterTake(beers));
                 out.println(beerLeft(beers) + containers(beerLeft(beers)) + " of beer on the wall.\r\n");
             }
         }
+    }
+
+    public static String actionAfterTake(int beer) {
+        return beer==0 ? "Go to the store, buy some more," : "Take one down, pass it around,";
     }
 
     public static int beerLeft(int beers) {
