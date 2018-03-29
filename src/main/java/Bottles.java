@@ -31,18 +31,18 @@ class Bottles
 
                 if (beers - 1 == 1){
 
-                    out.print(beers + " bottle" + s + " of beer on the wall,");
-                    out.println(beers + " bottle" + s + " of beer,");
+                    out.print(beers + " bottles" + " of beer on the wall,");
+                    out.println(beers + " bottles" + " of beer,");
                     out.print("Take one down, pass it around,");
                     s = "";
-                    out.println(beers-1 + " bottle" + s + " of beer on the wall.\r\n");
+                    out.println(beers-1 + " bottle" + " of beer on the wall.\r\n");
                 }
                 else{
-                    out.print(beers + " bottle" + s + " of beer on the wall,");
-                    out.println(beers + " bottle" + s + " of beer,");
+                    out.print(beers + " bottles" + " of beer on the wall,");
+                    out.println(beers + " bottles" + " of beer,");
                     out.print("Take one down, pass it around,");
                     s = "s";
-                    out.println(beers-1 + " bottle" + s + " of beer on the wall.\r\n");
+                    out.println(beers-1 + " bottles" + " of beer on the wall.\r\n");
                 }
 
 
