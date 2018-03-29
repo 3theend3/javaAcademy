@@ -10,15 +10,19 @@ class Bottles
     public static void writeLyrics(PrintStream out) {
         for (int beers=99; beers>-1;beers--)
         {
-            verse(out, beers);
+            out.print(beersOnWall(beers) + " of beer on the wall,");
+            out.println(beersOnWall(beers) + " of beer,");
+            out.print(actionAfterTake(beers));
+            out.println(beerLeftOnWall(beers) + " of beer on the wall.\r\n");
         }
     }
 
-    public static void verse(PrintStream out, int beers) {
-        out.print(beers + containers(beers) + " of beer on the wall,");
-        out.println(beers + containers(beers) + " of beer,");
-        out.print(actionAfterTake(beers));
-        out.println(beerLeft(beers) + containers(beerLeft(beers)) + " of beer on the wall.\r\n");
+    public static String beerLeftOnWall(int beers) {
+        return beerLeft(beers) + containers(beerLeft(beers));
+    }
+
+    public static String beersOnWall(int beers) {
+        return beers + containers(beers);
     }
 
     public static String actionAfterTake(int beer) {
