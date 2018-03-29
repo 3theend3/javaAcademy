@@ -23,21 +23,25 @@ class Bottles
                 out.print(beers + containers(beers) + " of beer on the wall,");
                 out.println(beers + containers(beers) + " of beer,");
                 out.print("Take one down, pass it around,");
-                out.println(beers-1 + containers(beers-1) + " of beer on the wall.\r\n");
-            }else if (beers - 1 == 1){
+                out.println(beerLeft(beers) + containers(beerLeft(beers)) + " of beer on the wall.\r\n");
+            }else if (beerLeft(beers) == 1){
 
                 out.print(beers + containers(beers) + " of beer on the wall,");
                 out.println(beers + containers(beers) + " of beer,");
                 out.print("Take one down, pass it around,");
-                out.println(beers-1 + containers(beers-1) + " of beer on the wall.\r\n");
+                out.println(beerLeft(beers) + containers(beerLeft(beers)) + " of beer on the wall.\r\n");
             }
             else{
                 out.print(beers + containers(beers) + " of beer on the wall,");
                 out.println(beers + containers(beers) + " of beer,");
                 out.print("Take one down, pass it around,");
-                out.println(beers-1 + containers(beers-1) + " of beer on the wall.\r\n");
+                out.println(beerLeft(beers) + containers(beerLeft(beers)) + " of beer on the wall.\r\n");
             }
         }
+    }
+
+    public static int beerLeft(int beers) {
+        return beers - 1;
     }
 
     private static String containers(int n){
